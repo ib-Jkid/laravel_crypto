@@ -1,0 +1,41 @@
+{
+    "name": "ibrodev/servicesetup",
+    "description": "Setups services development requirement",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ibrodev\\Servicesetup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Ibrodev\\Servicesetup\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ibrahim Abdulsamad",
+            "email": "abdulsamadibrahim210@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ibrodev\\Servicesetup\\ServiceSetupServiceProvider"
+            ],
+            "aliases": {
+               
+            }
+        }
+    },
+    "require": {
+        "orchestra/testbench": "6.x-dev",
+        "phpunit/phpunit": "9.5.x-dev",
+        "phpseclib/phpseclib": "dev-master"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
