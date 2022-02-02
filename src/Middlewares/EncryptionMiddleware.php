@@ -11,9 +11,7 @@ use phpseclib3\Crypt\Random;
 class EncryptionMiddleware
 {
     public function handle($request, Closure $next)
-    {
-
-        
+    {  
         $cipher = new AES('ctr');
 
         $iv = Random::string(16);
