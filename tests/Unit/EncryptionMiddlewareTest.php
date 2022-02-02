@@ -56,6 +56,6 @@ class EncryptionMiddlewareTest extends TestCase
         });
 
 
-        var_dump($response);
+      
     }
 }
