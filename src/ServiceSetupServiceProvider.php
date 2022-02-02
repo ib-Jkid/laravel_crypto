@@ -7,14 +7,12 @@ use Ibrodev\Servicesetup\Commands\InitializeCommand;
 use Ibrodev\Servicesetup\Middlewares\DecryptionMiddleware;
 use Ibrodev\Servicesetup\Middlewares\EncryptionMiddleware;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Foundation\Http\Kernel;
 
 class ServiceSetupServiceProvider extends ServiceProvider {
 
-    public function boot(Kernel $kernel) {
+    public function boot() {
 
-        $kernel->pushMiddleware(DecryptionMiddleware::class);
-        $kernel->pushMiddleware(EncryptionMiddleware::class);
+     
 
         if ($this->app->runningInConsole()) {
             $this->commands([
