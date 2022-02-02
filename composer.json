@@ -31,11 +31,13 @@
         }
     },
     "require": {
-        "orchestra/testbench": "6.x-dev",
-        "phpunit/phpunit": "9.5.x-dev",
-        "phpseclib/phpseclib": "dev-master"
+        "phpseclib/phpseclib": "*"
     },
     "scripts": {
         "test": "./vendor/bin/phpunit"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "orchestra/testbench": "*"
     }
 }
