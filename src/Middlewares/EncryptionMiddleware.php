@@ -14,7 +14,7 @@ class EncryptionMiddleware
 {
     public function handle($request, Closure $next)
     {  
-        if(env("APP_ENVIRONMENT","TEST") != "LIVE") {
+        if(env("APP_ENV","local") != "production") {
             $response = $next($request);
 
             return $response;
