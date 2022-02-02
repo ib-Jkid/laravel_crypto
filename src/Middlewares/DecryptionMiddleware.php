@@ -14,7 +14,11 @@ class DecryptionMiddleware
 {
     public function handle($request, Closure $next)
     {
+        if(env("APP_ENVIRONMENT","TEST") == "LIVE") {
+            $response = $next($request);
 
+            return $response;
+        }
         if(!$request->has("keys")) {
             throw new KeyNotFoundException("keys parameter is required");
         }
@@ -24,7 +28,7 @@ class DecryptionMiddleware
         }
 
         $privateKey = PublicKeyLoader::load(file_get_contents(Helper::get_file_path("private.key")));
-
+         
         $decryptedKeys = json_decode($privateKey->decrypt( base64_decode($request->keys) ), true );
 
         $cipher = new AES('ctr');
@@ -36,7 +40,7 @@ class DecryptionMiddleware
         $cipher->setIV($iv);
 
         $cipher->setKey($key);
-        
+
         try {
             $decryptedData = $cipher->decrypt(base64_decode($request->data));
         }catch(Exception $e) {

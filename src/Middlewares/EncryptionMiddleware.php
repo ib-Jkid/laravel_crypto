@@ -14,6 +14,11 @@ class EncryptionMiddleware
 {
     public function handle($request, Closure $next)
     {  
+        if(env("APP_ENVIRONMENT","TEST") == "LIVE") {
+            $response = $next($request);
+
+            return $response;
+        }
         if(!$request->has("public_key") ) {
             throw new KeyNotFoundException("reciever public key was not passed in the request");
         }
