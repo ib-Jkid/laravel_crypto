@@ -3,6 +3,8 @@
 namespace Ibrodev\Servicesetup\Middlewares;
 
 use Closure;
+use Exception;
+use Ibrodev\Servicesetup\Exceptions\EncryptionException;
 use Ibrodev\Servicesetup\Exceptions\KeyNotFoundException;
 use phpseclib3\Crypt\AES;
 use phpseclib3\Crypt\PublicKeyLoader;
@@ -12,6 +14,10 @@ class EncryptionMiddleware
 {
     public function handle($request, Closure $next)
     {  
+        if(!$request->has("public_key") ) {
+            throw new KeyNotFoundException("reciever public key was not passed in the request");
+        }
+
         $cipher = new AES('ctr');
 
         $iv = Random::string(16);
@@ -32,9 +38,7 @@ class EncryptionMiddleware
 
 
 
-        if(!$request->has("public_key") ) {
-            throw new KeyNotFoundException("Public key was not passed in the request");
-        }
+      
 
         $reciever_public_key = $request->public_key;
 
@@ -42,9 +46,13 @@ class EncryptionMiddleware
 
      
 
-     
+        try {
+            $cipherkey = $publicKey->encrypt( json_encode($keys) );
+        }catch(Exception $e) {
+            throw new EncryptionException("Failed to encrypt file");
+        }
       
-        $cipherkey = $publicKey->encrypt( json_encode($keys) );
+     
 
       
      
