@@ -7,10 +7,7 @@ use Ibrodev\Servicesetup\Middlewares\DecryptionMiddleware;
 use Ibrodev\Servicesetup\Middlewares\EncryptionMiddleware;
 use Illuminate\Http\Request;
 use Ibrodev\Servicesetup\Tests\TestCase;
-use Illuminate\Testing\Assert;
-use phpseclib3\Crypt\AES;
-use phpseclib3\Crypt\PublicKeyLoader;
-use phpseclib3\Crypt\Random;
+
 
 class EncryptionMiddlewareTest extends TestCase
 {
@@ -45,7 +42,7 @@ class EncryptionMiddlewareTest extends TestCase
             "public_key" =>  file_get_contents(  Helper::get_file_path("public.key") ) ]);
 
   
-        (new EncryptionMiddleware())->handle($baseRequest, function ($request) use($baseRequest) {
+        $response =  (new EncryptionMiddleware())->handle($baseRequest, function ($request) use($baseRequest) {
             
             (new DecryptionMiddleware())->handle($request, function ($request) use($baseRequest) {
                 $this->assertEquals($request->title,$baseRequest->title);
@@ -54,6 +51,11 @@ class EncryptionMiddlewareTest extends TestCase
                 $this->assertEquals($request->status, $baseRequest->status);
                 $this->assertTrue($request->has("public_key"));
             });
+
+         
         });
+
+
+        var_dump($response);
     }
 }

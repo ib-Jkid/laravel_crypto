@@ -44,17 +44,17 @@ class InitializeCommand extends Command
 
         $this->info('Setting up services requirements');
 
-      
-
         $privateKey = RSA::createKey();
-
 
         $publicKey = $privateKey->getPublicKey();
 
-
-
         file_put_contents(Helper::get_file_path("private.key"),$privateKey->toString("PKCS1"));
+
+        $this->info('Generated Private Key');
+
         file_put_contents(Helper::get_file_path("public.key"),$publicKey->toString("PKCS1"));
+
+        $this->info('Generated Public Key');
       
     }
 

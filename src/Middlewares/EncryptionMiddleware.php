@@ -3,8 +3,6 @@
 namespace Ibrodev\Servicesetup\Middlewares;
 
 use Closure;
-use Ibrodev\Servicesetup\Exceptions\DecryptionException;
-use Ibrodev\Servicesetup\Exceptions\InvalidRequestException;
 use Ibrodev\Servicesetup\Exceptions\KeyNotFoundException;
 use phpseclib3\Crypt\AES;
 use phpseclib3\Crypt\PublicKeyLoader;
@@ -58,6 +56,8 @@ class EncryptionMiddleware
       
 
         $response = $next($request);
+
+    
 
 
         return $response;
