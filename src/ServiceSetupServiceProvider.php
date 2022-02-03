@@ -1,11 +1,11 @@
 <?php 
 
 
-namespace Ibrodev\Servicesetup;
+namespace Neo\Servicesetup;
 
-use Ibrodev\Servicesetup\Commands\InitializeCommand;
-use Ibrodev\Servicesetup\Middlewares\DecryptionMiddleware;
-use Ibrodev\Servicesetup\Middlewares\EncryptionMiddleware;
+use Neo\Servicesetup\Commands\InitializeCommand;
+use Neo\Servicesetup\Middlewares\DecryptionMiddleware;
+use Neo\Servicesetup\Middlewares\EncryptionMiddleware;
 use Illuminate\Support\ServiceProvider;
 
 class ServiceSetupServiceProvider extends ServiceProvider {

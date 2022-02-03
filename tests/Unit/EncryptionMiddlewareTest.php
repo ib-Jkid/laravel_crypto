@@ -1,12 +1,12 @@
 <?php
 
-namespace Ibrodev\Servicesetup\Tests\Unit;
+namespace Neo\Servicesetup\Tests\Unit;
 
-use Ibrodev\Servicesetup\Helper;
-use Ibrodev\Servicesetup\Middlewares\DecryptionMiddleware;
-use Ibrodev\Servicesetup\Middlewares\EncryptionMiddleware;
+use Neo\Servicesetup\Helper;
+use Neo\Servicesetup\Middlewares\DecryptionMiddleware;
+use Neo\Servicesetup\Middlewares\EncryptionMiddleware;
 use Illuminate\Http\Request;
-use Ibrodev\Servicesetup\Tests\TestCase;
+use Neo\Servicesetup\Tests\TestCase;
 
 
 class EncryptionMiddlewareTest extends TestCase
