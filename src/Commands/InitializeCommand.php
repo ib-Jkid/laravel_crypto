@@ -1,8 +1,8 @@
 <?php
 
-namespace Ibrodev\Servicesetup\Commands;
+namespace Ibrodev\Crypto\Commands;
 
-use Ibrodev\Servicesetup\Helper;
+use Ibrodev\Crypto\Helper;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 use phpseclib3\Crypt\PublicKeyLoader;

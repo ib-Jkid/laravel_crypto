@@ -1,12 +1,12 @@
 <?php
 
-namespace Ibrodev\Servicesetup\Tests\Unit;
+namespace Ibrodev\Crypto\Tests\Unit;
 
-use Ibrodev\Servicesetup\Helper;
-use Ibrodev\Servicesetup\Middlewares\DecryptionMiddleware;
-use Ibrodev\Servicesetup\Middlewares\EncryptionMiddleware;
+use Ibrodev\Crypto\Helper;
+use Ibrodev\Crypto\Middlewares\DecryptionMiddleware;
+use Ibrodev\Crypto\Middlewares\EncryptionMiddleware;
 use Illuminate\Http\Request;
-use Ibrodev\Servicesetup\Tests\TestCase;
+use Ibrodev\Crypto\Tests\TestCase;
 
 
 class EncryptionMiddlewareTest extends TestCase

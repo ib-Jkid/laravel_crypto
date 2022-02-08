@@ -1,16 +1,16 @@
 {
-    "name": "ibrodev/servicesetup",
+    "name": "ibrodev/crypto",
     "description": "Setups services development requirement",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ibrodev\\Servicesetup\\": "src/"
+            "Ibrodev\\Crypto\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-          "Ibrodev\\Servicesetup\\Tests\\": "tests/"
+          "Ibrodev\\Crypto\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ibrodev\\Servicesetup\\ServiceSetupServiceProvider"
+                "Ibrodev\\Crypto\\ServiceSetupServiceProvider"
             ],
             "aliases": {
                

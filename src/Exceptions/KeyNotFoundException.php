@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibrodev\Servicesetup\Exceptions;
+namespace Ibrodev\Crypto\Exceptions;
 
 use Exception;
 

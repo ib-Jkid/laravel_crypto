@@ -1,12 +1,12 @@
 <?php
 
-namespace Ibrodev\Servicesetup\Middlewares;
+namespace Ibrodev\Crypto\Middlewares;
 
 use Closure;
 use Exception;
-use Ibrodev\Servicesetup\Exceptions\DecryptionException;
-use Ibrodev\Servicesetup\Exceptions\KeyNotFoundException;
-use Ibrodev\Servicesetup\Helper;
+use Ibrodev\Crypto\Exceptions\DecryptionException;
+use Ibrodev\Crypto\Exceptions\KeyNotFoundException;
+use Ibrodev\Crypto\Helper;
 use phpseclib3\Crypt\AES;
 use phpseclib3\Crypt\PublicKeyLoader;
 

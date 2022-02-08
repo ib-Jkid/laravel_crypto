@@ -1,6 +1,6 @@
 <?php
 
-namespace Ibrodev\Servicesetup;
+namespace Ibrodev\Crypto;
 
 use Illuminate\Support\Facades\App;
 

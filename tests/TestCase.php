@@ -1,8 +1,8 @@
 <?php
 
-namespace Ibrodev\Servicesetup\Tests;
+namespace Ibrodev\Crypto\Tests;
 
-use Ibrodev\Servicesetup\ServiceSetupServiceProvider;
+use Ibrodev\Crypto\ServiceSetupServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

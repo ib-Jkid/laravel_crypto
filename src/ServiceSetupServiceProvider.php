@@ -1,11 +1,11 @@
 <?php 
 
 
-namespace Ibrodev\Servicesetup;
+namespace Ibrodev\Crypto;
 
-use Ibrodev\Servicesetup\Commands\InitializeCommand;
-use Ibrodev\Servicesetup\Middlewares\DecryptionMiddleware;
-use Ibrodev\Servicesetup\Middlewares\EncryptionMiddleware;
+use Ibrodev\Crypto\Commands\InitializeCommand;
+use Ibrodev\Crypto\Middlewares\DecryptionMiddleware;
+use Ibrodev\Crypto\Middlewares\EncryptionMiddleware;
 use Illuminate\Support\ServiceProvider;
 
 class ServiceSetupServiceProvider extends ServiceProvider {
