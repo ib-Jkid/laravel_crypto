@@ -23,7 +23,7 @@ class EncryptionMiddlewareTest extends TestCase
             unlink(Helper::get_file_path("public.key"));
         }
        
-        $this->artisan('initialize:service')->assertSuccessful();
+        $this->artisan('crypto:init')->assertSuccessful();
 
         $this->assertFileExists(Helper::get_file_path("private.key"));
         $this->assertFileExists(Helper::get_file_path("public.key"));

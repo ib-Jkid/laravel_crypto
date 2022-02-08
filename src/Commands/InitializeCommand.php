@@ -15,7 +15,7 @@ class InitializeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'initialize:service';
+    protected $signature = 'crypto:init';
 
     /**
      * The console command description.
