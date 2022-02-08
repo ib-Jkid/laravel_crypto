@@ -1,11 +1,11 @@
 <?php
 
-namespace Neo\Servicesetup\Middlewares;
+namespace Ibrodev\Servicesetup\Middlewares;
 
 use Closure;
 use Exception;
-use Neo\Servicesetup\Exceptions\EncryptionException;
-use Neo\Servicesetup\Exceptions\KeyNotFoundException;
+use Ibrodev\Servicesetup\Exceptions\EncryptionException;
+use Ibrodev\Servicesetup\Exceptions\KeyNotFoundException;
 use phpseclib3\Crypt\AES;
 use phpseclib3\Crypt\PublicKeyLoader;
 use phpseclib3\Crypt\Random;

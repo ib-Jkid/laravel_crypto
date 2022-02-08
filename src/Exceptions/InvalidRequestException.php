@@ -1,6 +1,6 @@
 <?php
 
-namespace Neo\Servicesetup\Exceptions;
+namespace Ibrodev\Servicesetup\Exceptions;
 
 use Exception;
 

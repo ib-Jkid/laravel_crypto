@@ -1,8 +1,8 @@
 <?php
 
-namespace Neo\Servicesetup\Tests;
+namespace Ibrodev\Servicesetup\Tests;
 
-use Neo\Servicesetup\ServiceSetupServiceProvider;
+use Ibrodev\Servicesetup\ServiceSetupServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

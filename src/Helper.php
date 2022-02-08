@@ -1,6 +1,6 @@
 <?php
 
-namespace Neo\Servicesetup;
+namespace Ibrodev\Servicesetup;
 
 use Illuminate\Support\Facades\App;
 

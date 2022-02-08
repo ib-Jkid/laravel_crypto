@@ -1,8 +1,8 @@
 <?php
 
-namespace Neo\Servicesetup\Commands;
+namespace Ibrodev\Servicesetup\Commands;
 
-use Neo\Servicesetup\Helper;
+use Ibrodev\Servicesetup\Helper;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 use phpseclib3\Crypt\PublicKeyLoader;

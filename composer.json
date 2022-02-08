@@ -1,16 +1,16 @@
 {
-    "name": "neo/servicesetup",
+    "name": "ibrodev/servicesetup",
     "description": "Setups services development requirement",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Neo\\Servicesetup\\": "src/"
+            "Ibrodev\\Servicesetup\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-          "Neo\\Servicesetup\\Tests\\": "tests/"
+          "Ibrodev\\Servicesetup\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Neo\\Servicesetup\\ServiceSetupServiceProvider"
+                "Ibrodev\\Servicesetup\\ServiceSetupServiceProvider"
             ],
             "aliases": {
                
